@@ -1,0 +1,27 @@
+name: build.yml
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: install node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.18.4
+      - name: install
+        run: npm install
+      - name: build
+        run: npm run build
+      - name: Upload the files to the remote server
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          ARGS: "-avzr --delete" 
+          SOURCE: "./frontend/"
+          REMOTE_HOST: 101.200.179.180
+          REMOTE_USER: "root"
+          TARGET: '/home/pan/dist'
