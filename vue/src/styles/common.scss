@@ -1,0 +1,21 @@
+// ele样式覆盖
+@import './element-ui.scss';
+
+//公共配置1
+@import './main.css';
+
+//公共配置
+@import './public.css';
+
+//适配
+@import './media.scss';
+
+//新增样式
+@import './main.scss';
+
+.el-form-item__label{
+  font-size: 13px;
+}
+.el-table td{
+  text-align: center !important;
+}
