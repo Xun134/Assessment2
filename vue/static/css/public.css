@@ -1,0 +1,170 @@
+/* 修改页面样式，此css用来覆盖原css样式源码 */
+
+/* 初版框架css样式 */
+.el-icon-full-screen {
+	position: absolute;
+	top: 10px;
+	right: 45px;
+}
+
+.el-icon-full-screen:hover {
+	color: #409eff;
+}
+
+/* 租户管理新增弹框 */
+.avue-crud .el-input--small input,
+.avue-form .el-input--small input {
+	line-height: 22px;
+	height: 22px;
+}
+
+/* center内容区 搜索、刷新、显隐按钮 */
+/* .avue-form__group--flex{border: 1px solid #EBEEF5; border-radius: 3px;} */
+.avue-crud__search {
+	border: 1px solid #ebeef5;
+	border-radius: 3px;
+	margin-bottom: 5px;
+}
+
+.el-input.is-disabled .el-input__inner {
+	line-height: 22px;
+	height: 22px;
+}
+
+/* .avue-crud__menu {
+	position: relative;
+    height: 40px;
+	overflow: hidden !important;
+	border: 1px solid #ebeef5 !important;
+	border-radius: 3px !important;
+	margin-top: 3px !important;
+	padding-top: 3px;
+} */
+
+.avue-crud__left {
+	float: right;
+	position: absolute;
+	right: 0;
+	top: 3px;
+}
+
+.avue-crud__right {
+	float: left;
+}
+
+.avue-crud__right .el-button {
+	margin-left: 8px;
+}
+
+.avue-crud__search .el-form-item--mini.el-form-item,
+.avue-crud__search .el-form-item--small.el-form-item {
+	margin-bottom: 0;
+}
+
+.avue-form__group .avue-form__row {
+	padding: 0 0 0 10px !important;
+}
+
+.el-col {
+	margin-bottom: 0;
+}
+
+/* 表格 th */
+.el-table th>.cell {
+	text-align: center;
+}
+
+.el-drawer .avue-form {
+	padding: 0px;
+}
+
+/* 按钮 */
+.el-button--small {
+	line-height: 11px;
+}
+
+.el-button--primary.is-plain {
+	background-color: #409eff;
+	border-color: #409eff;
+	color: #fff;
+	padding: 3px 6px;
+}
+
+/* 分页样式 */
+.avue-crud__pagination {
+	position: relative;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 5px 5px;
+	text-align: right;
+	bottom: 0;
+	right: 0;
+}
+
+/* 调整表格选择框歪样式 */
+.el-table--border td:first-child .cell,
+.el-table--border th:first-child .cell {
+	padding: 0.2px 14px 0 10px;
+}
+
+/* 步骤条title字体 */
+.el-step.is-simple:not(:last-of-type) .el-step__title {
+	font-size: 13px;
+}
+
+.el-step.is-simple:not(:last-of-type) .el-step__title {
+	font-size: 11px;
+}
+
+/* 步骤条页面，策略多选框边框 */
+.el-checkbox.is-bordered {
+	border: none;
+	height: 20px;
+}
+
+.el-col .el-col-12 .el-col-offset-0 .el-col-xs-24 .el-col-sm-12 .el-col-md-12 .avue-form__row .avue--detail {
+	border: 1px solid #333 !important;
+}
+
+.avue--view .el-input.is-disabled .el-input__inner,
+.avue--view .el-textarea.is-disabled .el-textarea__inner {
+	border: 1px solid #eee;
+	width: 260px;
+}
+
+.el-form-item .el-form-item--feedback .is-required .el-form-item--small .avue-form__item-- {
+	text-align: right;
+}
+
+.el-message-box__content {
+	font-size: 11px !important;
+}
+
+.el-checkbox__label {
+	font-size: 11px !important;
+}
+
+.el-drawer__header> :first-child {
+	font-size: 11px;
+}
+
+.avue-empty__desc {
+	font-size: 11px;
+}
+
+.el-table--mini td,
+.el-table--mini th {
+	padding: 1px 0 !important;
+}
+
+
+.avue-crud .el-input--mini input,
+.avue-form .el-input--mini input {
+	height: 22px;
+	line-height: 22px;
+}
+
+
+/* .avue-crud__menu .avue-crud__left {
+	top: 3px !important;
+} */

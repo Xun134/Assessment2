@@ -1,0 +1,329 @@
+.avue-left,
+.avue-header,
+.avue-top,
+.avue-logo,
+.avue-layout .login-logo,
+.avue-main {
+  transition: all .3s;
+}
+
+.avue-contail {
+  width: 100%;
+  height: 100%;
+  background: #f0f2f5;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+
+.avue-left {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 186px; //240px
+  height: 100%;
+  z-index: 1025;
+}
+
+.avue--collapse {
+
+  .avue-left,
+  .avue-logo {
+    width: 60px;
+  }
+
+  .avue-header {
+    padding-left: 60px;
+  }
+
+  .avue-main {
+    width: calc(100% - 60px);
+    left: 60px;
+  }
+}
+
+.avue-header {
+  // padding-left: 240px;
+  padding-left: 186px;
+  width: 100%;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.avue-main {
+  position: absolute;
+  // left: 240px;
+  left: 186px;
+  padding: 0;
+  padding-bottom: 20px;
+  // width: calc(100% - 240px);
+  width: calc(100% - 186px);
+  height: calc(100% - 64px);
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: all 0.5s;
+  background: #f0f2f5;
+  z-index: 1026;
+
+  &--fullscreen {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.avue-view {
+  padding: 0 10px !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.avue-footer {
+  margin: 0 auto;
+  padding: 0 22px;
+  width: 1300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    margin-left: -50px;
+  }
+
+  .copyright {
+    color: #666;
+    line-height: 1.5;
+    font-size: 12px;
+  }
+}
+
+.avue-shade {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .3);
+  z-index: 1024;
+
+  &--show {
+    display: block;
+  }
+}
+
+
+
+@media screen and (max-width: 992px) {
+  $width: 186px;
+  // $width: 240px;
+
+  // ele的自适应
+  .el-dialog,
+  .el-message-box {
+    width: 98% !important;
+  }
+
+  //登录页面
+  .login-left {
+    display: none !important;
+  }
+
+  .login-logo {
+    padding-top: 30px !important;
+    margin-left: -30px;
+  }
+
+  .login-weaper {
+    margin: 0 auto;
+    width: 96% !important;
+  }
+
+  .login-border {
+    border-radius: 5px;
+    padding: 40px;
+    margin: 0 auto;
+    float: none !important;
+    width: 100% !important;
+  }
+
+  .login-main {
+    width: 100% !important;
+  }
+
+  //主框架
+  .avue-tags {
+    display: none;
+  }
+
+  .avue-left,
+  .avue-logo {
+    left: -$width;
+  }
+
+  .avue-main {
+    left: 0;
+    width: 100%;
+  }
+
+  .avue-header {
+    margin-bottom: 15px;
+    padding-left: 15px;
+  }
+
+  .top-bar__item {
+    display: none;
+  }
+
+  .avue--collapse {
+
+    .avue-left,
+    .avue-logo {
+      width: $width;
+      left: 0;
+    }
+
+    .avue-main {
+      left: $width;
+      width: 100%;
+    }
+
+    .avue-header {
+      padding: 0;
+      transform: translate3d(230px, 0, 0);
+    }
+
+    .avue-shade {
+      display: block;
+    }
+  }
+}
+
+
+.avue-crud-search__search .el-form-item {
+  margin-bottom: 5px;
+}
+
+.avue-crud .avue-crud-search__search .el-input--small input,
+.avue-form .avue-crud-search__search .el-input--small input {
+  height: 28px !important;
+  line-height: 28px !important;
+}
+
+.avue-crud-search__search .el-form-item__label {
+  line-height: 40px;
+}
+
+.el-popper[x-placement^=bottom] {
+  margin-top: 0px !important;
+}
+
+.avue-crud-search__search .el-input--small .el-input__icon {
+  line-height: 40px;
+}
+
+.mainBtn.el-button.is-plain:focus,
+.mainBtn.el-button.is-plain:hover {
+  border-color: transparent;
+  background: transparent;
+  opacity: 1;
+}
+
+.mainBtn.el-button.is-plain,
+.mainBtn.el-button.is-plain {
+  border-color: transparent;
+  background: transparent;
+  opacity: 0.8;
+}
+
+.avue--view .el-input.is-disabled .el-input__inner,
+.avue--view .el-textarea.is-disabled .el-textarea__inner {
+  background-color: #fff;
+  border-color: #dcdfe6;
+  border: 1px solid #dcdfe6;
+  color: #606266;
+}
+
+.el-collapse-item:last-child {
+  margin-bottom: 0px;
+}
+
+
+
+.el-dialog__header {
+  padding: 5px 24px !important;
+  min-height: 20px !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+  .el-icon-full-screen{
+    top: 10px;
+    // right:32px;
+  }
+  .el-dialog__headerbtn{
+    top:8px;
+    right:22px;
+  }
+}
+
+.avue-crud__dialog .el-dialog__body{
+  padding:10px 50px 10px 10px!important;
+}
+
+
+.box-sizing {
+  box-sizing: border-box;
+}
+
+.el-tabs--border-card {
+  border: none;
+  box-shadow: none;
+}
+
+.el-tabs--border-card>.el-tabs__header {
+  background-color: #F5F7FA;
+  // border:none;
+}
+
+.el-tabs--border-card>.el-tabs__header .el-tabs__item.is-active {
+  border: 1px solid transparent;
+  border-bottom: 1px solid #409eff;
+}
+
+.el-tabs--card>.el-tabs__header .el-tabs__item.is-active {
+  border-bottom: 1px solid #409eff;
+}
+
+.el-card__body {
+  padding: 10px !important;
+}
+
+.el-tabs--border-card>.el-tabs__content {
+  padding: 0 !important;
+  padding-top: 10px !important;
+}
+
+.el-image-viewer__wrapper {
+  z-index: 3000 !important;
+}
+
+.el-icon-full-screen {
+  position: absolute;
+  // top: 24px;
+  top: 11px;
+  right: 45px;
+}
+
+.el-icon-full-screen:hover {
+  color: #409eff;
+}
+
+.avue-left {
+  .el-menu--collapse {
+    .el-submenu {
+      i.el-submenu__icon-arrow {
+        display: none;
+      }
+    }
+  }
+}
+
